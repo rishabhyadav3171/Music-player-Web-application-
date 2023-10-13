@@ -1,0 +1,134 @@
+
+
+.player {
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.track-art {
+  margin: 25px;
+  height: 250px;
+  width: 250px;
+  background-image: url("tt.jpg");
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.now-playing {
+  font-size: 1rem;
+}
+
+.track-name {
+  font-size: 3rem;
+}
+
+.track-artist {
+  font-size: 1.5rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.playpause-track, .prev-track, .next-track {
+  padding: 25px;
+  opacity: 0.8;
+
+  /* Smoothly transition the opacity */
+  transition: opacity .2s;
+}
+
+.playpause-track:hover, .prev-track:hover, .next-track:hover {
+  opacity: 1.0;
+}
+
+.slider_container {
+  width: 75%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modify the appearance of the slider */
+.seek_slider, .volume_slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: rgb(127, 16, 16);
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+/* Modify the appearance of the slider thumb */
+.seek_slider::-webkit-slider-thumb, .volume_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.seek_slider:hover, .volume_slider:hover {
+  opacity: 1.0;
+}
+
+.seek_slider {
+  width: 60%;
+}
+
+.volume_slider {
+  width: 30%;
+}
+
+.current-time, .total-duration {
+  padding: 10px;
+}
+
+i.fa-volume-down, i.fa-volume-up {
+  padding: 10px;
+}
+
+i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
+  cursor: pointer;
+}
+body {
+  background-color: #556151;
+  -webkit-animation: random 5s infinite;
+  animation: random .5s infinite;
+  transition : background-color .5s;
+}
+@keyframes  random {
+  15% { background-color: red; } 
+  100% { background:linear-gradient(rgb(212, 13, 13),rgb(9, 123, 9),rgb(207, 207, 32)); } 
+  50% { background:linear-gradient(rgb(173, 190, 15),rgb(133, 10, 39),rgb(12, 41, 159)); } 
+  60% { background-color: rgb(10, 77, 10); } 
+  100% { background-color: rgb(17, 17, 111); }
+  100% { background-color: rgb(123, 32, 12); }
+  100% { background-color: rgb(15, 121, 22); }
+  30% { background-color: rgb(140, 13, 56); }
+  80% { background-color: rgb(194, 165, 18); }
+  100% { background-color: rgb(2, 22, 152); }
+  75% { background:radial-gradient(rgb(173, 173, 48),rgb(136, 38, 8),rgb(36, 121, 57));  }  
+  80%{background-color: rgb(24, 127, 148);}
+  100%{background-color: rgb(120, 15, 84);}
+  90%{background-color: rgb(115, 17, 115);}
+}
